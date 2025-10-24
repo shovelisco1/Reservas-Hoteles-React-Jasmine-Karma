@@ -11,7 +11,7 @@ function Pago() {
 
   const hotel = hoteles.find((h) => h.nombre === nombreHotel);
 
-  // Estados del formulario
+  
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
@@ -23,7 +23,7 @@ function Pago() {
   const [exp, setExp] = useState("");
   const [cvv, setCvv] = useState("");
 
-  // Formateo tarjeta y expiración
+  
   const handleTarjetaChange = (e) => {
     let valor = e.target.value.replace(/\D/g, "");
     valor = valor.replace(/(.{4})/g, "$1 ").trim();
@@ -38,7 +38,7 @@ function Pago() {
     setExp(valor);
   };
 
-  // Enviar reserva
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -60,7 +60,7 @@ function Pago() {
     reservas.push(reserva);
     localStorage.setItem("reservas", JSON.stringify(reservas));
 
-    alert("✅ Pago realizado con éxito. ¡Gracias por tu reserva!");
+    alert("Pago realizado con éxito. ¡Gracias por tu reserva!");
   };
 
   return (
@@ -111,7 +111,6 @@ function Pago() {
 
       <div className="container my-5">
         <div className="row justify-content-center">
-          {/* Formulario */}
           <div className="col-md-6">
             <div className="card shadow p-4 mb-4 mb-md-0">
               <h3 className="mb-3">Finalizar Reserva</h3>
@@ -258,7 +257,7 @@ function Pago() {
             </div>
           </div>
 
-          {/* Info hotel */}
+          
           <div className="col-md-4">
             <div className="card shadow p-3">
               <img

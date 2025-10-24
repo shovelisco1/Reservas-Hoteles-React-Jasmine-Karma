@@ -3,7 +3,7 @@
     import { useNavigate } from "react-router-dom";
     import "bootstrap/dist/css/bootstrap.min.css";
 
-    // Componente interno para mostrar cada tarjeta de hotel
+    
     function HotelCard({ hotel, verHotel }) {
     return (
         <div className="col-md-4">
