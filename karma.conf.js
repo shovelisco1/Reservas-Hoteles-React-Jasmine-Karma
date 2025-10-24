@@ -25,6 +25,16 @@ export default function (config) {
               },
             },
           },
+          {
+            // 👇 Loader para archivos CSS (soluciona tu error)
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+          },
+          {
+            // 👇 Loader para imágenes (por si tus componentes importan imágenes locales)
+            test: /\.(png|jpe?g|gif|svg)$/i,
+            type: "asset/resource",
+          },
         ],
       },
       resolve: {
@@ -32,8 +42,8 @@ export default function (config) {
       },
     },
     reporters: ["progress"],
-    browsers: ["ChromeHeadless"], 
-    singleRun: true, 
+    browsers: ["ChromeHeadless"],
+    singleRun: true,
     concurrency: Infinity,
   });
 }
