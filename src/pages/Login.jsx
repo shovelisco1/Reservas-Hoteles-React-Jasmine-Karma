@@ -17,8 +17,13 @@ function Login() {
     };
 
     return (
-        <div className="bg-light d-flex justify-content-center align-items-center vh-100">
-        <div className="card shadow-lg p-4" style={{ width: "320px" }}>
+        <div className="bg-light d-flex justify-content-center align-items-center vh-100" style={{        backgroundImage: "url(/img/fondo.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "100vh",}}>
+
+        <div className="card shadow-lg p-4" style={{ width: "320px",}}>
             <h1 className="text-center mb-4">StayChile</h1>
             <h5 className="text-center mb-3">Iniciar Sesión</h5>
             <form onSubmit={handleSubmit}>
